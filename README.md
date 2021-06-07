@@ -16,17 +16,17 @@ If you want to run the WASM part:
 ## Procedure
 To run the CLI demo, use the command
 
-    `cargo run`
+    cargo run
 
 in the root of the project
 
 To run the (more advanced, but buggy) WASM version, go into the `www` folder, and run
 
-    `npm run start`
+    npm run start
 
 It may first be required to run 
 
-    `npm install`
+    npm install
 
 
 
