@@ -1,0 +1,4 @@
+const CELL_SIZE = 5; // px
+const BG_GRID_COLOR = "#CCCCCC";
+const DEAD_CELL_COLOR = "#FFFFFF";
+const LIVING_CELL_COLOR = "#000000";
