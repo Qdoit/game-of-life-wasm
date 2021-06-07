@@ -20,7 +20,11 @@ To run the CLI demo, use the command
 
 in the root of the project
 
-To run the (more advanced, but buggy) WASM version, go into the `www` folder, and run
+To run the (more advanced, but buggy) WASM version, you have to first compile it, like this:
+
+    wasm-pack build
+
+then, go into the `www` folder, and run
 
     npm run start
 
