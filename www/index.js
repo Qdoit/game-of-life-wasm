@@ -17,7 +17,7 @@ function sleep(milliseconds) {
 import { Universe, Cell } from "game-of-life";
 import { memory } from "game-of-life/game_of_life_bg";
 
-const CELL_SIZE = 15; // px
+const CELL_SIZE = 20; // px
 const UNIVERSE_WIDTH = 32;
 const UNIVERSE_HEIGHT = 32;
 const BG_GRID_COLOR = "#CCCCCC";
@@ -105,8 +105,8 @@ document.addEventListener('keydown', (e) => {
 
 canvas.addEventListener('click', (e) => {
     var mouse_pos = getMousePos(canvas, e);
-    var col = Math.floor(mouse_pos.x/CELL_SIZE);
-    var row = Math.floor(mouse_pos.y/CELL_SIZE);
+    var col = Math.floor(mouse_pos.x/(CELL_SIZE+1));
+    var row = Math.floor(mouse_pos.y/(CELL_SIZE+1));
     universe.cell_click_update(row, col);
 });
 
