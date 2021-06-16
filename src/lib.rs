@@ -142,7 +142,7 @@ impl Universe {
     pub fn kill(&mut self) {
         self.cells = (0..self.width * self.height).map(|_| Cell::Dead).collect(); 
     }
-
+// right
     pub fn set_cell_active(&mut self, row: u32, column: u32) {
         let index = self.get_index(row, column);
         self.cells[index] = Cell::Alive;
@@ -157,7 +157,7 @@ impl Universe {
         self.cells[index] = match self.cells[index] {
             Cell::Alive => Cell::Dead,
             Cell::Dead => Cell::Alive,
-        }
+        }        
     }
 
 }

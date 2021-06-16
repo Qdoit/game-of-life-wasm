@@ -17,7 +17,7 @@ function sleep(milliseconds) {
 import { Universe, Cell } from "game-of-life";
 import { memory } from "game-of-life/game_of_life_bg";
 
-const CELL_SIZE = 20; // px
+const CELL_SIZE = 15; // px
 const UNIVERSE_WIDTH = 32;
 const UNIVERSE_HEIGHT = 32;
 const BG_GRID_COLOR = "#CCCCCC";
@@ -86,6 +86,8 @@ const draw_cells = () => {
 
 var should_tick = false;
 
+var wait_time = 200;
+
 document.addEventListener('keydown', (e) => {
     if (e.key == 'r') {
         universe.kill();
@@ -93,6 +95,7 @@ document.addEventListener('keydown', (e) => {
     }
     if (e.key == ' ') {
         should_tick = !should_tick;
+        wait_time = 200;
     }
     if (e.key == 'd') {
         universe.set_default_position();
@@ -100,6 +103,12 @@ document.addEventListener('keydown', (e) => {
     }
     if(e.key == 's') {
         universe.tick();
+    }
+    if(e.key == 'v') {
+        wait_time = 30;
+    }
+    if(e.key == 'o') {
+        wait_time = 0;
     }
 });
 
@@ -109,6 +118,8 @@ canvas.addEventListener('click', (e) => {
     var row = Math.floor(mouse_pos.y/(CELL_SIZE+1));
     universe.cell_click_update(row, col);
 });
+
+
 
 const renderLoop = () => {
     if(should_tick === true) {
