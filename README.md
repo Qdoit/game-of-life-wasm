@@ -20,7 +20,7 @@ To run the CLI demo, use the command
 
 in the root of the project
 
-To run the (more advanced, but buggy) WASM version, you have to first compile it, like this:
+To run the WASM version, you have to first compile it, like this:
 
     wasm-pack build
 
